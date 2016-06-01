@@ -1,8 +1,8 @@
 function load() {
 // This one fetches pure json, parses it, and prints a key to the screen
+
   var result_stuff = fetch('https://api.github.com/users/github')
   result_stuff.then(function(response) {
-//          document.getElementById("pract").innerHTML = response.text();
     console.log('response', response)
     console.log('header', response.headers.get('Content-Type'))
     return response.json()
